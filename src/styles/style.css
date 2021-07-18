@@ -1,9 +1,13 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  --background: #2a2a2a;
-  --yellow: #d3a024;
+  --background: linear-gradient(167.96deg, #2a2a2a 35.94%, #3f3f3f 100%);
+  --youtube: linear-gradient(180deg, #d3244e 43.75%, #e15173 100%);
+  --discord: linear-gradient(180deg, #7124d3 55.73%, #9051e1 100%);
+  --facebook: linear-gradient(180deg, #2494d3 51.04%, #51ade1 99.99%);
+  --github: linear-gradient(180deg, #d39824 54.17%, #e1b051 100%);
 }
+
 .container {
   display: flex;
   align-items: center;
@@ -12,34 +16,71 @@ body {
   height: 100%;
   background: var(--background);
 }
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
 }
+
 .profile {
   width: 10rem;
   height: 10rem;
-  background-color: green;
 
   border-radius: 50%;
-  border: 2px solid var(--yellow);
+  border: 2px solid white;
 }
+
+.username {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  filter: drop-shadow(-5px -10px 10px rgba(0, 0, 0, 0.25));
+}
+
+.profileWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(-5px -10px 10px rgba(0, 0, 0, 0.25));
+}
+
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s;
 
   width: 90%;
+  max-width: 30rem;
   height: 3.75rem;
 
   font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   text-decoration: none;
 
-  border: 2px solid var(--yellow);
   border-radius: 8px;
+
+  filter: drop-shadow(-5px -10px 10px rgba(0, 0, 0, 0.25));
+}
+
+.youtube-color {
+  background: var(--youtube);
+}
+
+.facebook-color {
+  background: var(--facebook);
+}
+
+.github-color {
+  background: var(--github);
+}
+
+.discord-color {
+  background: var(--discord);
 }
